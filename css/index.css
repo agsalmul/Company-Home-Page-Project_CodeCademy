@@ -3,34 +3,89 @@ html {
     font-family: "Playfair Display", serif;
     font-size: 16px;
     box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Glass Antiqua";
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.66rem
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 a:hover {
     cursor: pointer;
 }
 
-.container {
-    display: flex;
-}
-
 /* Header */
 
 header {
-    height: 5rem;
+    height: 7rem;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+header .container{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
+    width: 30%;
+    position: relative;
+    top: 0.3rem;
+    left: 2rem;
     font-family: "Glass Antiqua";
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+nav {
+    position: relative;
+    right: 2rem;
+    width: 30%;
+    min-width: 10rem;
 }
 
 nav ul {
-    display: inline-block;
-    margin-right: 2rem;
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
 }
 
 nav li {
-    padding-left: 3rem;
+    list-style-type: none;
+}
+
+li a {
+    color: black;
+    font-family: "Glass Antiqua";
+    font-size: 1.7rem;
+}
+
+header .mobile {
+    display: none;
 }
 
 /* Main */
@@ -43,26 +98,150 @@ main {
 /*Title */
 
 #title {
-    background-color: hsl(115 39 39);
-    color: hsl(41 39 64);
+    height: 40rem;
+    background-image: url('../images/Sandhill_Cranes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
     border-radius: 50%;
 }
 
 #title .container {
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-h1 {
-    font-size: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 h3 {
-    height: 4rem;
-    padding-top: 2rem;
-    font-size: 1.75rem;
+    margin-bottom: 10%;
 }
 
 /*Mission*/
 
+#mission {
+    margin-top: 1rem;
+    border: 1px solid black;
+}
+
+#mission .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mission h4 {
+    background-color: hsl(51 100 58);
+
+}
+
+
+/* Products */
+
+#products {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#products .container {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-auto-rows: auto;
+    justify-content: space-around;
+    justify-items: space-around;
+    align-items: center;
+    width: 85%;
+}
+
+.product {
+    max-width: 600px;
+    min-width: 200px;
+    width: 100%;
+    height: 90%;
+    border: 3px solid hsl(115 39 39);
+    background-color: hsl(41 39 64 / .9);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.product img {
+    min-height: 0;
+    min-width: 0;
+    width: 80%;
+    height: auto;
+    margin-top: .7rem;
+    border-radius: 5%;
+}
+
+.product h4 {
+    min-height: 0;
+    flex: 1 1 20%;
+}
+
+.product p {
+    min-height: 0;
+    flex: 1 1 20%;
+}
+
+/* Our Team */
+
+#team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#team .container {
+    display: grid;
+    grid-template-columns: repeat(3,31%);
+    grid-template-rows: 97%;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.person {
+    justify-self: center;
+    max-width: 500px;
+    min-width: 120px;
+    width: 90%;
+    height: auto;
+    border: 1px solid hsl(41 39 64);
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.person img {
+    min-height: 0;
+    min-width: 0;
+    width: 90%;
+    height: auto;
+    margin-top: .8rem;
+    border-radius: 2%;
+}
+
+
+/* Footer */
+
+footer {
+    border-top: 1px solid black;
+    height: 5rem;
+    width: 100%
+}
+
+footer h3 {
+    font-family: "Glass Antiqua";
+}
