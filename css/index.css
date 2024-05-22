@@ -51,9 +51,7 @@ header .container{
 }
 
 .logo {
-    width: 30%;
     position: relative;
-    top: 0.3rem;
     left: 2rem;
     font-family: "Glass Antiqua";
     font-size: 2rem;
@@ -61,16 +59,15 @@ header .container{
 
 nav {
     position: relative;
-    right: 2rem;
-    width: 30%;
-    min-width: 10rem;
+    right: 3rem;
+    min-width: 17rem;
 }
 
 nav ul {
     width: 100%;
     display: inline-flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
@@ -86,6 +83,20 @@ li a {
 
 header .mobile {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    header .mobile {
+        display: inline-flex;
+    }
+
+    header .desktop {
+        display: none;
+    }
+
+    nav {
+        min-width: 9rem;
+    }
 }
 
 /* Main */
@@ -193,6 +204,12 @@ h3 {
     flex: 1 1 20%;
 }
 
+@media only screen and (max-width: 600px) {
+    #products .container {
+        grid-template-columns: 100%;
+    }
+}
+
 /* Our Team */
 
 #team {
@@ -203,18 +220,18 @@ h3 {
 }
 
 #team .container {
-    display: grid;
-    grid-template-columns: repeat(3,31%);
-    grid-template-rows: 97%;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .person {
     justify-self: center;
     max-width: 500px;
-    min-width: 120px;
-    width: 90%;
+    min-width: 200px;
+    width: 31%;
     height: auto;
     border: 1px solid hsl(41 39 64);
     border-radius: 2%;
@@ -222,6 +239,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 1rem;
 }
 
 .person img {
@@ -232,7 +250,6 @@ h3 {
     margin-top: .8rem;
     border-radius: 2%;
 }
-
 
 /* Footer */
 
